@@ -1,4 +1,3 @@
-# PBC2016
-2016 GSFC Python BootCamp
+2016 GSFC Python Boot Camp (PBC2016)
 
-Necessary documents for the BootCamp.
+Necessary documents for the Boot Camp.
