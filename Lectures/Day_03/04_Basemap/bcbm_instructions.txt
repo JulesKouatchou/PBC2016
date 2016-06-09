@@ -1,0 +1,143 @@
+GSFC Python Boot Camp 2016
+--------------------------
+
+Presentation on Python Matpolotlib Basemap
+------------------------------------------
+
+Friday 17 June 2016 - Presenter: Peter Hall
+----------------------------------------------
+
+For this section you will need :
+
+1. i.)  A text editor you know how to use.
+        (Emacs, Vi, Edit, etc.)
+   ii.) A graphics file viewer you know how to use.
+        (EOG, ImageMagick, etc.)
+
+2. Software to test your Python installation
+
+   i.)  bcbm_test.py
+   ii.) bcbm_test_plot1_compare.png
+
+   These can be downloaded from the Boot Camp GitHub.
+   They are a test program and sample output file provided before the 
+   start of the Boot Camp.
+   They are meant to check that your machine (Windows/Macintosh/Linux) 
+   is set up properly to run the software necessary for this section.
+   The Boot Camp overall instructions provide for installing Python
+   with the Anaconda bundle. 
+   It is assumed that your Anaconda installation includes the following
+   Python modules : numpy, h5py, matplotlib.
+   Running "bcbm_test.py" (see below) will check that they are all present
+   on your machine. If they are not please install them. 
+   Please note that Basemap is included with Anaconda but is not part
+   of the default installation. You need to run "conda install basemap"
+   as an indivdual command after the main Anaconda install.
+   Once the relevant software is installed run at the prompt :
+
+   > bcbm_test.py -v 
+
+   If your set up is working properly expect to see something like :
+
+   BCBM_TEST : bcbm_test_cmd_line = ['-v']
+   BCBM_TEST : Program started : 2015-06-03 09:07:04.264686
+   BCBM_TEST : sys.version     = 2.7.6 (default, Apr 22 2014, 11:43:50)
+   [GCC 4.1.2 20080704 (Red Hat 4.1.2-54)]
+   BCBM_TEST : sys.version           = 2.7.6 (default, Apr 22 2014, 11:43:50)
+   [GCC 4.1.2 20080704 (Red Hat 4.1.2-54)]
+   BCBM_TEST : self.verbose          = True
+   BCBM_TEST : self.test_mode        = False
+   BCBM_TEST : display_map1 ACTIVATED
+   BCBM_TEST : Program ended : 2015-06-03 09:07:05.376743
+   BCBM_TEST : Run time      : 0:00:01.112057
+   BCBM_TEST : Program completed normally
+
+   If you do not get this type of output check your Python setup,
+   ammend as needed and retry.
+
+   If "bcbm_test.py" runs properly you will find (in the same directory 
+   you ran the program) an output file called "bcbm_test_plot1.png".
+   This is a very basic map of the world. Compare it to the sample file
+   "bcbm_test_plot1_compare.png". Expect very similar output.
+   IE. A monochrome outline map of the world, eliptical shape. 
+
+   If you are not producing the expected results 
+   please check your Python installation. 
+
+3. For the actual presentation you will need (from the Boot Camp GitHub) :
+
+   Four demonstration source code files :
+
+   i.)   bcbm1.py
+   ii.)  bcbm2.py
+   iii.) bcbm3.py
+   iv.)  bcbm4.py
+
+   Two test data files :
+
+   i.)  bcbm_OMPS_LP_L2_test1.h5 - swath data
+   ii.) bcbm_OMPS_NM_L3_test2.h5 - gridded data
+
+   Also provided is a skeleton python program "bcbm_pyskel.py".
+   This will run, though produces nominal output only.
+   It is meant for you to use to develop your own software later.
+   It provides a very basic program layout with command line parsing,
+   function calls and clean invocation and closure.
+   Like all software shown in the Basemap part of the course it can be
+   run at the prompt and also imported as a module to another Python program.
+   (See object orientation part of Boot Camp for further details.)
+ 
+
+4. Problems for the Basemap presentation :
+
+   Breakout session
+   ----------------
+   Part 1
+   ------
+   Make a backup copy of "bcbm4.py" (EG. bcbm4_bu1.py).
+   Then modify the original "bcbm4.py" to plot satellite tracks over North America.
+   Use the data from "bcbm_OMPS_LP_L2_test1.h5" - a read function for this file is 
+   already provided in "bcbm4.py".
+    
+   Part 2
+   ------
+   If your home town is within the area covered by the map add it to the map,
+   along with population statistics.
+   If your hometown has too small a population to show up 
+   (minimum size one pixel on the map) multiply its population by
+   10, 100, etc. for it to show up.
+
+   If your home town falls outside the area of the map pick a town/city
+   within the map area with some significance to you and plot it accordingly.
+   (If your hometown is off the map and there is nowhere of some significance 
+    to you within the map borders plot the location of Anchorage, Alaska.)
+
+   Close examination of "bcbm4.py" shows that the population of Lawrence, Kansas
+   has been exaggerated by a factor of 10 so it will appear on the map.
+   Why was this city included on the map ?
+   Hint : Examine the map edges closely.   
+
+
+
+
+   Overnight Exercize
+   ------------------
+   Make a backup copy of "bcbm2.py" (EG. bcbm2_bu1.py).
+   Then modify the original "bcbm2.py".
+   Add two input parameters :
+
+   "-m" meridian width
+   "-p" parallel width
+
+   Alter "bcbm2.py" so that a user can change the spacing of 
+   the meridians and/or parallels with the "-m" and/or "-p" parameters.
+   Use the existing hard coded values as defaults.
+   Include appropriate range limits on input values.
+   Ensure that "bcbm2.py -h" provides appropriate help text.
+
+   More information about how the argument parser works can be found at :
+
+   https://docs.python.org/dev/library/argparse.html
+     
+
+
