@@ -1,0 +1,37 @@
+# http://data.giss.nasa.gov/gistemp/graphs_v3/Fig.A2.txt
+#Global Land-Ocean Temperature Index (C) (Anomaly with Base: 1951-1980)
+
+We want to reproduce the Global Land-Ocean Temperature Index plot 
+available at this GISS website:
+
+     http://data.giss.nasa.gov/gistemp/graphs_v3/
+
+The temperature anomaly data are in the file:
+
+     Global_Land-Ocean_TempIndex.txt
+
+(obtained from http://data.giss.nasa.gov/gistemp/graphs_v3/Fig.A2.txt)
+Note that there are missing data.
+
+Here are the steps:
+
+  1- Write a function that read the file and populate the three lists:
+     years, annualMeanTemp and fiveYearMean. 
+  2- Find ways to take into account the missing values while filling 
+     annualMeanTemp and fiveYearMean.
+  3- Convert the three lists into Numpy arrays and create masks to 
+     identify the missing data.
+  4- Use Matplotlib to plot the data. 
+
+We propose two possible solutions:
+
+  1- Long  Solution: PBC2016_sol_analyzeTempData_1.py
+     Write a function that does the normal reading of the data
+     and include Python statements to skip header lines and 
+     identify missing values. In addition mask the data to not
+     include missing values.
+
+  2- Short Solution: PBC2016_sol_analyzeTempData_2.py
+     Use a Numpy function to reads the file and automatically
+     skips the header lines and handles the missing values.
+
