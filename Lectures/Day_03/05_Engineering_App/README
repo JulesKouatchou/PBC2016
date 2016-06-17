@@ -1,1 +1,17 @@
-Test..
+Engineering Application
+-----------------------
+
+This lecture describes an IRAD (Internal Research and Development)
+project, "CATTENS", to develop an engineering application, which is being
+written in Python.
+
+To run the jupyter notebook as a slide presentation, you should be able
+to either simply execute the 'runslides.sh' file,
+
+    ./runslides.sh
+
+... or if that doesn't work, try copying the text out of that file
+and execute it as a command:
+
+    jupyter nbconvert cattens.ipynb --to slides --post serve --config slides_config.py
+
