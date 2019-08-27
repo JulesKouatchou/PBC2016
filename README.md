@@ -1,4 +1,4 @@
-2016 GSFC Python Boot Camp (PBC2016)
+# 2016 GSFC Python Boot Camp (PBC2016)
 
 <p>This is the main repository for all of the notebooks, code, and other documents for the GSFC Python Bootcamp 2016.</p>
 
